@@ -51,4 +51,8 @@ bool CircularLinkedList::search(int rollno, Node** aqilah, Node** alifian) {
 	if (rollno == LAST->rollNumber) {
 		return true;
 	}
+	else {
+		return false;
+	}
 }
+
