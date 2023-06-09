@@ -12,4 +12,9 @@ public:
 class CircularLinkedList {
 private:
 	Node* LAST;
+public:
+	CircularLinkedList() {
+		LAST = NULL;
+	}
 };
+
