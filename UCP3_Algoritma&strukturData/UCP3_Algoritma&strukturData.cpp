@@ -60,3 +60,6 @@ bool CircularLinkedList::listEmpty(){
 	return LAST == NULL;
 }
 
+bool CircularLinkedList::delNode() {
+
+}
