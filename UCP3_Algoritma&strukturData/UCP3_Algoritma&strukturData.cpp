@@ -34,7 +34,9 @@ void CircularLinkedList::addNode() {
 	cout << "input name :";
 	cin >> name;
 
-	
+	Node* newNode = new Node();
+	newNode->rollNumber = rollNo;
+	newNode->name = name;
 }
 
 bool CircularLinkedList::search(int rollno, Node** aqilah, Node** alifian) {
@@ -104,7 +106,7 @@ int main() {
 				}
 			case '3':{
 					obj.traverse();
-					break
+					break;
 				}
 			case '4': {
 				return 0;
