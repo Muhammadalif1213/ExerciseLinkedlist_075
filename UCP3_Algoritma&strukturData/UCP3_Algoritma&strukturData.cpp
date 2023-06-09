@@ -37,6 +37,23 @@ void CircularLinkedList::addNode() {
 	Node* newNode = new Node();
 	newNode->rollNumber = rollNo;
 	newNode->name = name;
+
+	if (listEmpty()) {
+		newNode->next = newNode;
+		LAST = newNode;
+	}
+	else {
+		Node* alifian = LAST->next;
+		Node* aqilah = NULL;
+
+		do {
+			aqilah = alifian;
+			alifian = alifian->next;
+		}
+		while{
+
+		}
+	}
 }
 
 bool CircularLinkedList::search(int rollno, Node** aqilah, Node** alifian) {
