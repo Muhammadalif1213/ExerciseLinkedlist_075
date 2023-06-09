@@ -36,3 +36,10 @@ void CircularLinkedList::addNode() {
 
 	
 }
+
+bool CircularLinkedList::search(int rollno, Node** previous, Node** current) {
+	*previous = LAST->next;
+	*current = LAST->next;
+
+	
+}
