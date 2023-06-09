@@ -25,3 +25,14 @@ public:
 
 };
 
+void CircularLinkedList::addNode() {
+	int rollNo;
+	string name;
+
+	cout << "input number :";
+	cin >> rollNo;
+	cout << "input name :";
+	cin >> name;
+
+	
+}
