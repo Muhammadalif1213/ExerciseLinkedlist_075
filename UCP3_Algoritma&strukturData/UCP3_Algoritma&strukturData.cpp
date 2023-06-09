@@ -63,3 +63,19 @@ bool CircularLinkedList::listEmpty(){
 bool CircularLinkedList::delNode() {
 
 }
+
+void CircularLinkedList::traverse() {
+	if (listEmpty()) {
+		cout << "\nlist is empty\n";
+	}
+	else {
+		cout << "\nRecord in the list are: \n";
+		Node* currentNode = LAST->next;
+		while (currentNode != LAST) {
+			cout << currentNode->rollNumber << "" << currentNode->name << endl;
+			currentNode = currentNode->next;
+		}
+		cout << LAST->rollNumber << "" << LAST->name << endl;
+	}
+}
+
