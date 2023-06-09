@@ -49,11 +49,16 @@ void CircularLinkedList::addNode() {
 		do {
 			aqilah = alifian;
 			alifian = alifian->next;
-		}
-		while{
-
+		} while (alifian != LAST && alifian->rollNumber < rollNo);
+		
+		if (alifian == LAST && alifian->rollNumber < rollNo)
+		{
+			newNode->next = LAST->next;
+			LAST->next = newNode;
+			LAST = newNode;
 		}
 	}
+	cout << "node added !\n";
 }
 
 bool CircularLinkedList::search(int rollno, Node** aqilah, Node** alifian) {
