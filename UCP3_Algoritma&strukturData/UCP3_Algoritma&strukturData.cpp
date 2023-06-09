@@ -56,3 +56,7 @@ bool CircularLinkedList::search(int rollno, Node** aqilah, Node** alifian) {
 	}
 }
 
+bool CircularLinkedList::listEmpty(){
+	return LAST == NULL;
+}
+
