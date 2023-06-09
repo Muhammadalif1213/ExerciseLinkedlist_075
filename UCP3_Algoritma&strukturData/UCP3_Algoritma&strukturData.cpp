@@ -18,7 +18,7 @@ public:
 	}
 
 	void addNode();
-	bool search(int rollno, Node** previous, Node** current);
+	bool search(int rollno, Node** aqilah, Node** alifian);
 	bool listEmpty();
 	bool delNode();
 	void traverse();
@@ -37,9 +37,16 @@ void CircularLinkedList::addNode() {
 	
 }
 
-bool CircularLinkedList::search(int rollno, Node** previous, Node** current) {
-	*previous = LAST->next;
-	*current = LAST->next;
+bool CircularLinkedList::search(int rollno, Node** aqilah, Node** alifian) {
+	*aqilah = LAST->next;
+	*alifian = LAST->next;
 
+	while (*alifian != LAST) {
+		if (rollno == (*alifian)->rollNumber) {
+			return true;
+		}
+		*aqilah = *alifian;
+		*alifian = (*alifian)->next;
+	}
 	
 }
