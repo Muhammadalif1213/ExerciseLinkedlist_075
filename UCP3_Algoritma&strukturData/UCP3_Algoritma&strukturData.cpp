@@ -85,7 +85,39 @@ bool CircularLinkedList::listEmpty(){
 }
 
 bool CircularLinkedList::delNode() {
+	if (listEmpty()) {
+		cout << "\nList is empty\n";
+		return false;
+	}
 
+	int rollNo;
+	cout << "\nEnter roll number to delete: ";
+	cin >> rollNo;
+
+	Node* aqilah = NULL;
+	Node* alifian = NULL;
+
+	if (search(rollNo, &aqilah, &alifian)) {
+		if (alifian == LAST) { 
+			if (LAST->next == LAST) { 
+				LAST = NULL;
+			}
+			else {
+				LAST->next = alifian->next;
+			}
+			delete alifian;
+		}
+		else {
+			aqilah->next = alifian->next;
+			delete alifian;
+		}
+		cout << "Node deleted!\n";
+		return true;
+	}
+	else {
+		cout << "not found!\n";
+		return false;
+	}
 }
 
 void CircularLinkedList::traverse() {
